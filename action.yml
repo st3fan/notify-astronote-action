@@ -1,0 +1,20 @@
+name: Notify AstroNote Action
+description: Send Github Actions workflow status notifications to AstroNote
+author: AstroNote
+inputs:
+  status:
+    description: Job Status
+    required: true
+  notify_when:
+    description: Specify on which events a notification is sent
+    required: false
+    default: 'success,failure,warnings'
+
+branding:
+  icon: send
+  color: green
+
+runs:
+  using: docker
+  image: Dockerfile
+
